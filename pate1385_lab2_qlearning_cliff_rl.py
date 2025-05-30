@@ -1,4 +1,4 @@
-from lab2_qleaning_cliff_env import Env
+from pate1385_lab2_qleaning_cliff_env import Env
 import numpy as np
 import time
 import os
@@ -12,7 +12,7 @@ qtable = np.random.rand(env.stateCount, env.actionCount).tolist()
 # hyperparameters
 epoch = 50  # episodes
 gamma = 0.1 #learning rate
-epsilon = 0.08 # exploration rate
+epsilon = 0.1 # exploration rate
 decay = 0.1 # reduction in exploration rate in next episode
 
 # training loop
@@ -21,7 +21,7 @@ for i in range(epoch):
     steps = 0
 
     while not done:
-        os.system('clear')
+        os.system('cls')
         print("episode #", i+1, "/", epoch)
         env.render()
         time.sleep(0.05)

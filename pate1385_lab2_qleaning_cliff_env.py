@@ -41,7 +41,7 @@ class Env:
             done = False
             self.posX, self.posY = 0, self.height - 1  # Reset to start
         elif self.posX == self.endX and self.posY == self.endY:
-            reward = 1
+            reward = -1
             done = True
         else:
             reward = -1  # Small penalty for every move
